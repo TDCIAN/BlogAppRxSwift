@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E34CE49279E098F0031B804 /* SearchBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E34CE48279E098F0031B804 /* SearchBarViewModel.swift */; };
 		1E98DDE3279A284000C28536 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E98DDE2279A284000C28536 /* AppDelegate.swift */; };
 		1E98DDE5279A284000C28536 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E98DDE4279A284000C28536 /* SceneDelegate.swift */; };
 		1E98DDEC279A284100C28536 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E98DDEB279A284100C28536 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E34CE48279E098F0031B804 /* SearchBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModel.swift; sourceTree = "<group>"; };
 		1E98DDDF279A284000C28536 /* BlogAppRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlogAppRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E98DDE2279A284000C28536 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E98DDE4279A284000C28536 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				1EA712AE279D32E20096B274 /* SearchBar.swift */,
+				1E34CE48279E098F0031B804 /* SearchBarViewModel.swift */,
 			);
 			path = SearchBar;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				1E98DDE3279A284000C28536 /* AppDelegate.swift in Sources */,
 				1EA712B1279D35730096B274 /* FilterView.swift in Sources */,
 				1E98DDE5279A284000C28536 /* SceneDelegate.swift in Sources */,
+				1E34CE49279E098F0031B804 /* SearchBarViewModel.swift in Sources */,
 				1EA712C7279D451C0096B274 /* SearchBlogNetwork.swift in Sources */,
 				1EA712C0279D3A830096B274 /* AlertActionConvertible.swift in Sources */,
 			);
