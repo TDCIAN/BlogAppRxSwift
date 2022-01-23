@@ -12,17 +12,18 @@ import SnapKit
 
 class SearchBar: UISearchBar {
     let disposeBag = DisposeBag()
+    
     let searchButton = UIButton()
     
 //    // SearchBar 버튼 탭 이벤트
 //    let searchButtonTapped = PublishRelay<Void>()
 //
 //    // SearchBar 외부로 내보낼 이벤트
-//    var shouldLoadResult = Observable<String>.of("") // of에 들어있는 ""는 초기값
+//    var shouldLoadResult = Observable<String>.of("")
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-
+        
 //        bind()
         attribute()
         layout()
@@ -32,18 +33,22 @@ class SearchBar: UISearchBar {
         fatalError("init(coder:) has not been implemented")
     }
     
+
+    
+//    private func bind() {
     func bind(_ viewModel: SearchBarViewModel) {
         self.rx.text
             .bind(to: viewModel.queryText)
             .disposed(by: disposeBag)
         
-        // searchbar search button tapped
-        // button tapped
         Observable
             .merge(
                 self.rx.searchButtonClicked.asObservable(),
                 searchButton.rx.tap.asObservable()
             )
+            .map {
+                print("버튼 눌렀다")
+            }
             .bind(to: viewModel.searchButtonTapped)
             .disposed(by: disposeBag)
         
@@ -65,7 +70,6 @@ class SearchBar: UISearchBar {
     
     private func layout() {
         addSubview(searchButton)
-        
         searchTextField.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(12)
             $0.trailing.equalTo(searchButton.snp.leading).offset(-12)
@@ -86,3 +90,4 @@ extension Reactive where Base: SearchBar {
         }
     }
 }
+

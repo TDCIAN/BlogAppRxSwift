@@ -31,7 +31,7 @@ class FilterView: UITableViewHeaderFooterView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func bind(_ viewModel: FilterViewModel) {
+    func bind(_ viewModel: FilterViewModel) {
         sortButton.rx.tap
             .bind(to: viewModel.sortButtonTapped)
             .disposed(by: disposeBag)

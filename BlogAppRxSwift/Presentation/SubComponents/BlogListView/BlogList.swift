@@ -24,13 +24,17 @@ class BlogListView: UITableView {
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
+        
+        attribute()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func bind(_ viewModel: BlogListViewModel) {
+    func bind(_ viewModel: BlogListViewModel) {
+        headerView.bind(viewModel.filterViewModel)
+        
         viewModel.cellData
             .drive(self.rx.items) { tableView, row, data in
                 let index = IndexPath(row: row, section: 0)
