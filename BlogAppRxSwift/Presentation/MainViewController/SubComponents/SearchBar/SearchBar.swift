@@ -65,6 +65,7 @@ class SearchBar: UISearchBar {
         searchTextField.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(12)
             $0.trailing.equalTo(searchButton.snp.leading).offset(-12)
+            $0.centerY.equalToSuperview()
         }
         
         searchButton.snp.makeConstraints {
